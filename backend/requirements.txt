@@ -1,0 +1,8 @@
+fastapi[all]
+uvicorn
+torch>=2.0.0
+torchvision
+scipy
+numpy
+python-multipart
+gym

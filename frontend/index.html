@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefly Facial Recognition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Firefly Network</h1>
+            <p class="subtitle">Deep Q-Network enhanced by Swarm Intelligence</p>
+        </header>
+
+        <main>
+            <div class="grid-layout">
+                <div class="card upload-card">
+                    <h2>Biometric Scan</h2>
+                    <div class="drop-zone" id="dropZone">
+                        <div class="icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 4v16m-8-8h16"/>
+                            </svg>
+                        </div>
+                        <p>Drop facial image or <span class="highlight">browse</span></p>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                    </div>
+                    <div class="preview-container" id="previewContainer" style="display: none;">
+                        <img id="imagePreview" src="" alt="Preview">
+                        <button class="btn primary" id="scanBtn">Initiate Neural Scan</button>
+                    </div>
+                </div>
+
+                <div class="card results-card">
+                    <h2>Analysis Array</h2>
+                    <div class="status-panel">
+                        <div class="indicator" id="statusIndicator"></div>
+                        <span id="statusText">Awaiting Input...</span>
+                    </div>
+                    
+                    <div class="details-pane">
+                        <div class="detail-item">
+                            <label>DQN Confidence</label>
+                            <div class="progress-bar"><div class="fill" id="confidenceFill" style="width: 0%"></div></div>
+                        </div>
+                        <div class="detail-item">
+                            <label>Firefly Optimization</label>
+                            <span class="badge" id="fireflyStatus">ACTIVE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal" id="terminalLog">
+                        <div class="log-entry">> System initialized.</div>
+                        <div class="log-entry">> Model weights loaded.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="admin-section">
+                <button class="btn secondary" id="trainBtn">Trigger Background Training (Firefly DQN)</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

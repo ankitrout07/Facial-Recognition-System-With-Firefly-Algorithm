@@ -1,0 +1,25 @@
+# Facial Recognition System with Firefly Algorithm
+
+To run this project, follow these steps:
+
+1. **Install Dependencies**:
+   Open your terminal and run:
+   ```bash
+   pip install -r backend/requirements.txt
+   ```
+
+2. **Start the Backend Server**:
+   Navigate to the project root and run:
+   ```bash
+   python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
+   ```
+
+3. **Access the Web Dashboard**:
+   Open your browser and navigate to:
+   [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+**Features**:
+- Firefly Algorithm Optimized DQN for facial feature evaluation.
+- High-tech Glassmorphism UI.
+- Real-time biometric scanning and background training.
