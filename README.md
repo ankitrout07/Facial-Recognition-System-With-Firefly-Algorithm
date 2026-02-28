@@ -24,8 +24,10 @@ This project implements a facial recognition system using a Deep Q-Network (DQN)
 2.  **Create and activate a virtual environment**
     ```bash
     python -m venv .venv
+
     # Windows
     .venv\Scripts\activate
+    
     # macOS/Linux
     source .venv/bin/activate
     ```
