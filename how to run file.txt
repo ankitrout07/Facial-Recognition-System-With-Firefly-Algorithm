@@ -1,0 +1,45 @@
+# How to Run - Facial Recognition System with Firefly Algorithm
+
+This guide provides step-by-step instructions to get the system up and running.
+
+## 1. Setup Environment
+It is recommended to use a virtual environment.
+
+```bash
+# Create a virtual environment
+python -m venv .venv
+
+# Activate the virtual environment
+# On Windows:
+.venv\Scripts\activate
+# On macOS/Linux:
+source .venv/bin/activate
+```
+
+## 2. Install Dependencies
+Install the required Python packages:
+
+```bash
+pip install -r backend/requirements.txt
+```
+
+## 3. Run the Backend Server
+Start the FastAPI server using Uvicorn:
+
+```bash
+# From the project root directory
+uvicorn backend.main:app --reload
+```
+
+The server will be available at http://localhost:8000.
+
+## 4. Access the Interface
+Open your web browser and go to:
+http://localhost:8000
+
+## 5. Usage
+- **Upload Image**: Drag and drop or browse for a facial image in the "Biometric Scan" section.
+- **Analyze**: Click "Initiate Neural Scan" to get a prediction.
+- **Train**: Click "Trigger Background Training" to optimize the model using the Firefly Algorithm.
+
+Note: The first time you run a prediction, if `dqn_model.pth` is not found, the system will use uninitialized weights or you can trigger training to generate the model file.
